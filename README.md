@@ -49,9 +49,9 @@ gulp build
 deploy to gh-pages automatically after push to branch
 
 deploy:
-[main](https://presto-agency.github.io/Power-her)
-[article](https://presto-agency.github.io/Power-her/article.html)
-[blog](https://presto-agency.github.io/Power-her/blog.html)
-[convert-kit](https://presto-agency.github.io/Power-her/convert-kit.html)
-[imprint](https://presto-agency.github.io/Power-her/imprint.html)
+[main](https://presto-agency.github.io/Power-her),
+[article](https://presto-agency.github.io/Power-her/article.html),
+[blog](https://presto-agency.github.io/Power-her/blog.html),
+[convert-kit](https://presto-agency.github.io/Power-her/convert-kit.html),
+[imprint](https://presto-agency.github.io/Power-her/imprint.html),
 [privacy-policy](https://presto-agency.github.io/Power-her/privacy-policy.html)
