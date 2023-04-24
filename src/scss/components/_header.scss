@@ -1,0 +1,244 @@
+.header {
+  padding: 32px 0 49px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  &-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.24em;
+      letter-spacing: 0.06em;
+      color: $primary;
+      width: 190px;
+      margin: 0 auto 0 15px;
+
+      @include d(992) {
+        display: none;
+      }
+    }
+  }
+
+  &__btn {
+    @include d(992) {
+      display: none;
+    }
+  }
+}
+
+.logo {
+  display: inline-block;
+  max-width: 148px;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-wrapper {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  // display: none;
+  @include d(992) {
+    position: absolute;
+    top: -32px;
+    right: 0;
+    display: inline-block;
+    width: 50vw;
+    height: 100vh;
+    background-color: $beigeLight;
+    pointer-events: none;
+    // pointer-events: none;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity .5s ease-out, transform .5s ease-out;
+
+    @include d(768) {
+      transform: translateX(-20px);
+      width: 100vw;
+    }
+
+    &.active {
+      opacity: 1;
+      pointer-events: initial;
+      transform: translateX(0);
+      .nav-list__link, a {
+        pointer-events: initial;
+      }
+    }
+
+    .btn_xl {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+.nav {
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    // pointer-events: none;
+
+    @include d(992) {
+      padding: 130px 15px 0 15px;
+      font-size: 18px;
+      display: block;
+      text-align: right;
+      border-top: 1px solid $beigeLight;
+      // pointer-events: initial;
+
+      @include d(768) {
+        text-align: left;
+      }
+    }
+
+    &__item,
+    li {
+      position: relative;
+      color: $grayLight;
+
+      margin-bottom: 20px;
+
+      @include d(992) {
+        margin-bottom: 0;
+        width: 100%;
+      }
+
+      &:first-child {
+        @include d(992) {
+          border-top: 1px solid $beige
+        }
+      }
+
+
+    }
+
+    &__link,
+    a {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 14px;
+      position: relative;
+      text-decoration: none;
+      // pointer-events: none;
+      // transition: color $hover-duration $timing;
+      @include d(992) {
+        color: $black;
+        padding: 20px 0;
+        display: block;
+        // pointer-events: none;
+      }
+
+      &.active {
+        color: $black !important;
+        // pointer-events: initial;
+
+        &::before {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+
+      @include rh(1024) {
+        &:hover {
+          color: $black !important;
+
+          &::before {
+            width: 100%;
+            opacity: 1;
+          }
+        }
+      }
+
+      &::before {
+        content: "";
+        bottom: 0;
+        height: 1px;
+        background-color: $primary;
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 0;
+        opacity: 0;
+        transition: opacity $hover-duration $timing, width $hover-duration $timing;
+
+        @include d(992) {
+          background-color: $beige;
+          bottom: 0;
+          width: 100%;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.burger {
+  position: relative;
+  width: 22px;
+  height: 16px;
+  z-index: 101;
+  display: none;
+  margin-left: 20px;
+
+  @include d(992) {
+    display: inline-block;
+  }
+
+  &_item {
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background-color: $black;
+    left: 0;
+    transition: .5s ease-out;
+
+    &:first-child {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      margin-top: -1px;
+    }
+
+    &:last-child {
+      bottom: 0;
+    }
+  }
+
+  &.active {
+    .burger_item {
+      &:first-child {
+        transform: rotate(45deg);
+        top: 7px;
+      }
+
+      &:nth-child(2) {
+        width: 0;
+      }
+
+      &:last-child {
+        transform: rotate(-45deg);
+        bottom: 7px;
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+// footer
+.footer {
+  padding-top: 64px;
+  background-color: $black;
+  color: $white;
+  overflow: hidden;
+  z-index: 20;
+  // flex: 0 0 100%;
+  width: 100%;
+  @include d(1024) {
+    padding-top: 32px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 56px 0;
+    border-top: 1px solid $beigeLight;
+
+    @include d(1024) {
+      padding: 30px;
+    }
+
+    @include d(768) {
+      padding: 24px 0;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__list {
+    margin-left: 20px;
+
+    @include d(768) {
+      margin: 24px 0 0 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      flex: 0 0 100%;
+    }
+
+    li {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 95px;
+
+        @include d(768) {
+          margin-right: 0;
+        }
+      }
+
+      a {
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 1.3em;
+        color: $white;
+        text-decoration: none;
+      }
+      &:last-child {
+        a {
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
