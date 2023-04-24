@@ -1,4 +1,4 @@
-const deployFolder = "dist";
+const deployFolder = "docs";
 const devFolder = "src";
 
 let fileSystem = require("fs");
@@ -106,13 +106,13 @@ const js = () => {
     "node_modules/gsap/dist/CSSRulePlugin.min.js",
     "node_modules/gsap/dist/ScrollTrigger.min.js",
     "node_modules/gsap/dist/ScrollToPlugin.min.js",
-    // "node_modules/gsap/dist/ScrollSmoother.min.js",
+    // "node_modules/gsap/docs/ScrollSmoother.min.js",
 
     // modal
-    // "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
+    // "node_modules/@fancyapps/fancybox/docs/jquery.fancybox.min.js",
 
     // tooltips
-    // "node_modules/@popperjs/core/dist/umd/popper.min.js",
+    // "node_modules/@popperjs/core/docs/umd/popper.min.js",
 
     // counter
     // "node_modules/jquery-nice-select/js/jquery.nice-select.min.js",
