@@ -2441,7 +2441,7 @@ main {
 
 .position,
 .location {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.3em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -2941,6 +2941,68 @@ ul li a {
   padding: 50px 0;
 }
 
+.not-found {
+  max-height: 100vh;
+}
+
+.not-found .hero:before {
+  display: none;
+}
+
+.not-found .hero .container {
+  background: #F2EFEA;
+  max-width: 1168px;
+}
+
+.not-found .hero__row {
+  margin: 0 -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.not-found .hero__content {
+  max-width: 590px;
+  padding: 0 0 0 80px;
+}
+
+.not-found .hero .title-1 {
+  font-size: 120px;
+  line-height: 100%;
+  margin-bottom: 25px;
+}
+
+.not-found .hero .subtitle {
+  padding-bottom: 25px;
+  margin-bottom: 64px;
+  border-bottom: 1px solid #828282;
+}
+
+.not-found .hero .subtitle i {
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 170%;
+}
+
+.not-found .hero__img {
+  position: relative;
+  top: 0px;
+  width: auto;
+}
+
+.not-found .hero__img img {
+  width: 100%;
+  max-width: 496px;
+}
+
 @media only screen and (min-width: 1024px), (any-hover: hover) {
   .nav-list__link:hover,
   .nav-list a:hover {
@@ -3041,6 +3103,22 @@ ul li a {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 160px;
             flex: 0 0 160px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .not-found .hero__content {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .not-found .hero .title-1 {
+    font-size: 80px;
+  }
+
+  .not-found .hero__img img {
+    width: 100%;
+    max-width: 350px;
   }
 }
 
@@ -3456,6 +3534,10 @@ ul li a {
             flex-direction: column;
   }
 
+  .section__gift {
+    padding: 50px 0;
+  }
+
   .footer__row {
     padding: 24px 0;
     -webkit-box-orient: vertical;
@@ -3518,6 +3600,10 @@ ul li a {
     width: 100%;
     max-width: 100%;
     padding: 0 24px;
+  }
+
+  .testimonials {
+    padding: 50px 0;
   }
 
   .testimonials-item__content {
@@ -3670,6 +3756,45 @@ ul li a {
 
   .cta__img img {
     min-height: 314px;
+  }
+}
+
+@media (max-width: 768px) {
+  .not-found {
+    height: auto;
+    max-height: 100%;
+  }
+
+  .not-found .hero {
+    padding: 100px 0 0;
+  }
+
+  .not-found .hero__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .not-found .hero__content {
+    text-align: center;
+    max-width: 100%;
+    padding: 50px 15px;
+  }
+
+  .not-found .hero .title-1 {
+    font-size: 44px;
+    margin-bottom: 15px;
+  }
+
+  .not-found .hero .subtitle {
+    padding-bottom: 15px;
+    margin-bottom: 24px;
+  }
+
+  .not-found .hero__img {
+    right: 0;
   }
 }
 

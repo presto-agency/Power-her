@@ -188,6 +188,9 @@
   @include d(1280) {
     padding: 100px 0;
   }
+  @include d(768) {
+    padding: 50px 0;
+  }
 
   &__title {
     display: none;
@@ -303,7 +306,7 @@
 
 .position,
 .location {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.3em;
   letter-spacing: 0.1em;
   text-transform: uppercase;

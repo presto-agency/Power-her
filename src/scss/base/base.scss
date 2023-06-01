@@ -844,6 +844,10 @@ main {
     @include d(992) {
       padding: 80px 0;
     }
+
+    @include d(768) {
+      padding: 50px 0;
+    }
   }
 }
 
