@@ -425,6 +425,107 @@ if (homePage) {
           console.log('enter BACK CTA');
         }
       }));
+      instances.push(ScrollTrigger.create({
+        trigger: ".section__img-desc",
+        start: '40% 50%',
+        end: '40% 50%',
+        markers: false,
+        preventOverlaps: true,
+        fastScrollEnd: true,
+        onEnter: function onEnter() {
+          if (!buttonClicked && !settingUp) {
+            // goToSection(i)
+            console.log('enter cta');
+            disableScroll();
+            gsap.to(window, {
+              onStart: disableScroll,
+              scrollTo: {
+                y: "#section10",
+                autoKill: false
+              },
+              overwrite: true,
+              duration: 1
+            });
+            gsap.to('.js-img-3', {
+              duration: 1,
+              maxWidth: '44%',
+              height: '100%',
+              width: '44%',
+              bottom: '0',
+              delay: 1.5
+            });
+            setTimeout(function () {
+              gsap.to(window, {
+                scrollTo: {
+                  y: "#section11",
+                  autoKill: false
+                },
+                overwrite: true,
+                duration: 1,
+                onComplete: enableScroll
+              });
+            }, 1500);
+          }
+          console.log('enter COVER 2');
+        },
+        onEnterBack: function onEnterBack() {
+          disableScroll();
+          console.log('leave');
+          if (!buttonClicked && !settingUp) {
+            console.log('enter BACK COVER 2');
+          }
+        }
+      }));
+      instances.push(ScrollTrigger.create({
+        trigger: ".js-section__cta-decs",
+        start: '0 50%',
+        end: '0 50%',
+        markers: false,
+        preventOverlaps: true,
+        fastScrollEnd: true,
+        onEnter: function onEnter() {
+          disableScroll();
+          if (!buttonClicked && !settingUp) {
+            // goToSection(i)
+            console.log('enter CTA');
+          }
+        },
+        onEnterBack: function onEnterBack() {
+          if (!buttonClicked && !settingUp) {
+            // goToSection(i)
+            console.log('leave cta');
+            disableScroll();
+            gsap.to(window, {
+              onStart: disableScroll,
+              scrollTo: {
+                y: "#section10",
+                autoKill: false
+              },
+              overwrite: true,
+              duration: 1
+            });
+            gsap.to('.js-img-3', {
+              duration: 1,
+              maxWidth: '100%',
+              height: '100vh',
+              width: '100vw',
+              bottom: '100%'
+            });
+            setTimeout(function () {
+              gsap.to(window, {
+                scrollTo: {
+                  y: "#section9",
+                  autoKill: false
+                },
+                overwrite: true,
+                duration: 1,
+                onComplete: enableScroll
+              });
+            }, 1500);
+          }
+          console.log('enter BACK CTA');
+        }
+      }));
       document.querySelectorAll(".nav-list a").forEach(function (btn, index) {
         btn.addEventListener("click", function (e) {
           e.preventDefault();

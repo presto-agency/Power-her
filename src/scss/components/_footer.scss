@@ -11,6 +11,45 @@
     padding-top: 32px;
   }
 
+  &-top {
+    padding: 72px 0;
+    .container{
+      display: flex;
+      justify-content: space-between;
+      @include d(1024) {
+        flex-direction: column;
+      }
+    }
+    &__desc{
+      max-width: 970px;
+      @include d(1024) {
+       max-width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+    &__title{
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 100%;
+      font-family: $fontTitle;
+      color: $white;
+      margin-bottom: 32px;
+      span{
+        color: $primary;
+      }
+    }
+    &__text{
+      max-width: 752px;
+      font-weight: 400;
+      font-size: 18px;
+      font-family: $fontTitle;
+      line-height: 150%;
+      color: $white;
+      span{
+        color: $primary;
+      }
+    }
+  }
   &__row {
     display: flex;
     align-items: center;

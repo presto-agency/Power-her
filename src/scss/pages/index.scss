@@ -201,7 +201,7 @@
   }
 
   &__content {
-    max-width: 64%;
+    max-width: 67%;
     margin-left: auto;
     padding-right: 110px;
 
@@ -288,7 +288,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-
+      @include d(1200) {
+        flex-wrap: wrap;
+      }
       @include d(768) {
         display: block;
         text-align: left;
@@ -997,4 +999,32 @@ ul {
   display: flex;
   justify-content: center;
   padding: 50px 0;
+}
+.js-section__cta-decs {
+  .title-2{
+    margin-bottom: 40px;
+  }
+  li{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 170%;
+    color: #0D0A0B;
+    margin-bottom: 33px;
+    display: flex;
+    align-items: center;
+    span{
+      min-width: 56px;
+      width: 56px;
+      height: 56px;
+      background-color: $white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 24px;
+      img{
+        max-width: 32px;
+        max-height: 32px;
+      }
+    }
+  }
 }
